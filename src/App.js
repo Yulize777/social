@@ -20,8 +20,9 @@ function App() {
 		<Suspense fallback={'...Loading'}>
 				{
 					!user.login.length  ?
-						<PrivateRouting/> :
-						<AuthRouting/>
+						<AuthRouting/>:
+						<PrivateRouting/>
+
 				}
 		</Suspense>
 	)
