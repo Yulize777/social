@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import DownLoadBtn from '../../components/DownloadBtn/DownloadBtn'
 import { fillUser } from '../../redux/reducers/user'
 import axios from '../../utils/axios'
+import { useToast } from '@chakra-ui/react'
 
 const Friends = () => {
 	const { t } = useTranslation()
@@ -17,6 +18,8 @@ const Friends = () => {
 	const navigate = useNavigate()
 
 	const dispatch = useDispatch()
+
+	const toast = useToast()
 
 	const {
 		register,
@@ -37,7 +40,14 @@ const Friends = () => {
 				dispatch(fillUser(data))
 				navigate('/')
 			})
-			.catch(err => console.log(err))
+			.catch(err => toast({
+				title: 'an error occured.',
+				description: "We've created your account for you.",
+				status: 'error',
+				duration: 5000,
+				position: 'top-center',
+				isClosable: true,
+			}))
 	}
 	return (
 		<div className='register'>

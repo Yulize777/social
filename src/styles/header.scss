@@ -1,15 +1,45 @@
 .header {
 	background: #222222;
+	&__popover{
+		padding: 20px;
+		&__top{
+			display: flex;
+			column-gap: 10px;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+		&__list{
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+		}
+		&__line{
+			display: flex;
+			flex-direction: row;
+			column-gap: 10px;
+			align-items: center;
+			padding: 5px;
+			&:not(:nth-child(2)):hover{
+				background: #FFFFFF50;
+				cursor: pointer;
+
+		}
+		}
+	}
 	&__nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+	&__title{
+		cursor: pointer;
 	}
 	&__left {
 		display: flex;
 		align-items: center;
 		column-gap: 35px;
 	}
+
 	&__right {
 		display: flex;
 		align-items: center;
@@ -38,13 +68,17 @@
 		cursor: pointer;
 	}
 	&__user {
-		display: flex;
-		align-items: center;
-		column-gap: 4px;
-		cursor: pointer;
-		padding: 15px 10px;
+		display: flex !important;
+		align-items: center !important;
+		column-gap: 4px !important;
+		cursor: pointer !important;
+		padding: 15px 10px !important;
+		height: auto !important;
+		border-radius: 0!important;
+		background: transparent!important;
+		border: none !important;
 		&:hover {
-			background: #424242;
+			background: #424242 !important;
 		}
 		&-photo {
 			border-radius: 50%;

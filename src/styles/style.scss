@@ -11,9 +11,10 @@
 	font-style: normal;
 	color: white;
 }
-body {
-	background-color: #181818;
+body{
+	background: black;
 }
+
 
 button,
 input {
@@ -43,3 +44,6 @@ $red: #f5222d;
 @import 'header';
 @import 'switchLang';
 @import 'register';
+@import 'asideBar';
+@import 'friends';
+@import 'myProfile';

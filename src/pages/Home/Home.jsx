@@ -1,6 +1,14 @@
-import React from 'react'
-const Home = () => {
-	return <div></div>
-}
+import React from 'react';
+import AsideBaRMain from "../../components/asideBar/AsideBaRMain";
 
-export default Home
+const Home = () => {
+    return (
+        <section>
+            <div className="container">
+                <AsideBaRMain/>
+            </div>
+        </section>
+    );
+};
+
+export default Home;

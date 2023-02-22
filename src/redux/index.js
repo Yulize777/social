@@ -12,9 +12,11 @@ import {
 import storage from 'redux-persist/lib/storage'
 
 import user from './reducers/user'
+import findUser from "./reducers/findUser";
 
 const rootReducer = combineReducers({
 	user,
+	findUser
 })
 
 const persistConfig = {
